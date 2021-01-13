@@ -224,8 +224,13 @@ void gauss_ran(double *r1, double *r2)
  u2 = (double)rand() * twopi / RAND_MAX;
 #else
  double scale = 1.0/1024.0/1024.0/1024.0/2.0;
+#ifdef WIN32
+ u1 = rand() * scale;
+ u2 = rand() * scale * twopi;
+#else
  u1=random()*scale;
  u2=random()*scale*twopi;
+#endif
 #endif 
  lt= sqrt( -2.0 * log(u1) );
  *r1=cos(u2)*lt;

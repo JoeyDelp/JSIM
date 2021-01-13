@@ -81,7 +81,7 @@ char **argv;
 /* use real time to set random number generator to non repeatable state */
   ftime(&now);
   seed = now.time*1000+now.millitm;
-#ifdef NORANDOM
+#ifdef WIN32
   srand(seed);
 #else
   srandom(seed);
