@@ -29,8 +29,9 @@
 
 #include <stdio.h>
 #include <math.h>
-#ifdef NORANDOM
+#include <string.h>
 #include <stdlib.h>
+#ifdef NORANDOM
 #endif
 
 /* constants */

@@ -22,3 +22,5 @@ add_subdirectory(jsimtxt)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin/${PLATFORM}/${CMAKE_BUILD_TYPE})
 
 add_executable(jsim_n ${JSIM_DEV} ${JSIM_TXT} main_n.c)
+
+target_link_libraries(jsim_n m)
